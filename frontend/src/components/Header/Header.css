@@ -1,0 +1,350 @@
+/* ==============================
+   HEADER
+   ============================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+
+  width: 100%;
+
+  background-color: rgba(243, 240, 235, 0.94);
+
+  border-bottom:
+    var(--border-width)
+    solid
+    rgba(221, 215, 207, 0.85);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* ==============================
+   CONTAINER
+   ============================== */
+
+.site-header__container {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 76px;
+}
+
+
+/* ==============================
+   LOGO
+   ============================== */
+
+.site-header__logo {
+  display: inline-flex;
+
+  align-items: center;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-family-heading);
+
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+
+  letter-spacing: -0.02em;
+
+  white-space: nowrap;
+
+  transition:
+    color var(--transition-normal);
+}
+
+.site-header__logo span {
+  color: var(--color-primary);
+}
+
+.site-header__logo:hover {
+  color: var(--color-text-primary);
+}
+
+.site-header__logo:hover span {
+  color: var(--color-primary-dark);
+}
+
+
+/* ==============================
+   NAVEGAÇÃO
+   ============================== */
+
+.site-header__nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.25rem;
+}
+
+.site-header__link {
+  position: relative;
+
+  padding: 0.5rem 0;
+
+  color: var(--color-text-secondary);
+
+  font-family: var(--font-family-base);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+
+  transition:
+    color var(--transition-normal);
+}
+
+.site-header__link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background-color: var(--color-primary);
+
+  transition:
+    width var(--transition-normal);
+}
+
+.site-header__link:hover {
+  color: var(--color-text-primary);
+}
+
+.site-header__link:hover::after {
+  width: 100%;
+}
+
+
+/* ==============================
+   LINK ATIVO
+   ============================== */
+
+.site-header__link.active {
+  color: var(--color-primary);
+}
+
+.site-header__link.active::after {
+  width: 100%;
+}
+
+
+/* ==============================
+   BOTÃO CONTATO
+   ============================== */
+
+.site-header__contact {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 40px;
+
+  padding: 0.6rem 1rem;
+
+  background-color: transparent;
+
+  border:
+    var(--border-width)
+    solid
+    var(--color-primary);
+
+  border-radius: var(--border-radius-md);
+
+  color: var(--color-primary);
+
+  font-family: var(--font-family-heading);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal),
+    border-color var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+.site-header__contact:hover {
+  background-color: var(--color-primary);
+
+  border-color: var(--color-primary);
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* ==============================
+   MENU MOBILE
+   ============================== */
+
+.site-header__menu {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  background-color: transparent;
+
+  border:
+    var(--border-width)
+    solid
+    var(--color-border);
+
+  border-radius: var(--border-radius-md);
+
+  color: var(--color-text-primary);
+
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+.site-header__menu:hover {
+  background-color: var(--color-bg-card);
+
+  border-color: var(--color-primary);
+
+  color: var(--color-primary);
+}
+
+
+/* ==============================
+   TABLET
+   ============================== */
+
+@media (max-width: 1024px) {
+  .site-header__nav {
+    gap: 0.9rem;
+  }
+
+  .site-header__link {
+    font-size: var(--font-size-xs);
+  }
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 768px) {
+  .site-header__container {
+    position: relative;
+
+    min-height: 68px;
+  }
+
+  .site-header__menu {
+    display: inline-flex;
+
+    position: relative;
+
+    z-index: calc(var(--z-sticky) + 1);
+  }
+
+  .site-header__nav {
+    position: absolute;
+
+    top: calc(100% + 1px);
+
+    left: 0;
+    right: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 0.75rem 1rem 1rem;
+
+    background-color: var(--color-bg-card);
+
+    border-bottom:
+      var(--border-width)
+      solid
+      var(--color-border);
+
+    box-shadow: var(--shadow-lg);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity var(--transition-normal),
+      visibility var(--transition-normal),
+      transform var(--transition-normal);
+  }
+
+  .site-header__nav--open {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+  .site-header__link {
+    width: 100%;
+
+    padding: 0.9rem 0.5rem;
+
+    font-size: var(--font-size-md);
+  }
+
+  .site-header__link::after {
+    display: none;
+  }
+
+  .site-header__link.active {
+    color: var(--color-primary);
+  }
+
+  .site-header__contact {
+    width: 100%;
+
+    margin-top: 0.5rem;
+  }
+}
+
+
+/* ==============================
+   CELULARES PEQUENOS
+   ============================== */
+
+@media (max-width: 480px) {
+  .site-header__logo {
+    font-size: var(--font-size-lg);
+  }
+
+  .site-header__nav {
+    padding-left: 0.875rem;
+
+    padding-right: 0.875rem;
+  }
+}

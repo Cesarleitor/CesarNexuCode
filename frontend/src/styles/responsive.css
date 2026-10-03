@@ -1,0 +1,126 @@
+/* ========================================
+   TABLETS GRANDES
+   ======================================== */
+
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 1.25rem;
+
+    --font-size-5xl: 3.25rem;
+    --font-size-4xl: 2.5rem;
+    --font-size-3xl: 1.875rem;
+  }
+
+  .section {
+    padding-top: var(--spacing-4xl);
+    padding-bottom: var(--spacing-4xl);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* ========================================
+   TABLETS
+   ======================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 1rem;
+
+    --font-size-5xl: 2.75rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-3xl: 1.75rem;
+    --font-size-2xl: 1.375rem;
+  }
+
+  .section {
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+  }
+
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ========================================
+   CELULARES
+   ======================================== */
+
+@media (max-width: 600px) {
+  :root {
+    --container-padding: 1rem;
+
+    --font-size-5xl: 2.4rem;
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.6rem;
+    --font-size-2xl: 1.3rem;
+  }
+
+  .section {
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  .button {
+    min-height: 46px;
+  }
+}
+
+
+/* ========================================
+   CELULARES PEQUENOS
+   ======================================== */
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 0.875rem;
+
+    --font-size-5xl: 2.125rem;
+    --font-size-4xl: 1.8rem;
+    --font-size-3xl: 1.5rem;
+    --font-size-2xl: 1.25rem;
+  }
+
+  .section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+
+/* ========================================
+   TELAS MUITO PEQUENAS
+   ======================================== */
+
+@media (max-width: 360px) {
+  :root {
+    --container-padding: 0.75rem;
+
+    --font-size-5xl: 2rem;
+    --font-size-4xl: 1.65rem;
+  }
+}
