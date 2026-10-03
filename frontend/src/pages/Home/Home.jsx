@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Home.css'
 import banner01 from '../../assets/banner01.jpg'
 
@@ -46,19 +47,19 @@ function Home() {
           </p>
 
           <div className="hero__actions">
-            <a
-              href="/projetos"
+            <Link
+              to="/projetos"
               className="button button-primary"
             >
               Ver projetos
-            </a>
+            </Link>
 
-            <a
-              href="/contato"
+            <Link
+              to="/contato"
               className="button button-secondary"
             >
               Entre em contato
-            </a>
+            </Link>
           </div>
 
         </div>
