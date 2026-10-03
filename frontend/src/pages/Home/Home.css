@@ -1,0 +1,451 @@
+.hero {
+  position: relative;
+
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: var(--color-bg-primary);
+
+  overflow: hidden;
+}
+
+/* CÉREBRO / IA */
+
+.hero__brain {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30% center;
+
+  pointer-events: none;
+
+  opacity: 0.55;
+
+  animation:
+    brainPulse 6s ease-in-out infinite,
+    brainGlow 6s ease-in-out infinite;
+}
+
+/* SOBREPOSIÇÃO */
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(243, 240, 235, 0.98) 0%,
+      rgba(243, 240, 235, 0.94) 35%,
+      rgba(243, 240, 235, 0.55) 58%,
+      rgba(243, 240, 235, 0.12) 100%
+    );
+
+  pointer-events: none;
+}
+
+/* CONTEÚDO */
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+}
+
+.hero__content {
+  max-width: 680px;
+
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-4xl);
+}
+
+.hero__eyebrow {
+  display: inline-block;
+
+  margin-bottom: var(--spacing-md);
+
+  color: var(--color-primary);
+
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero__title {
+  margin: 0;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-family-heading);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: var(--font-weight-bold);
+
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.hero__title span {
+  display: block;
+
+  color: var(--color-primary);
+}
+
+.hero__description {
+  max-width: 600px;
+
+  margin-top: var(--spacing-lg);
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+
+  margin-top: var(--spacing-xl);
+}
+
+.hero__actions .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 0 1.4rem;
+
+  border-radius: var(--border-radius-md);
+
+  text-decoration: none;
+}
+
+/* PONTOS DE LUZ NEURAIS */
+
+.hero__neural-points {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.hero__neural-points span {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background-color: var(--color-primary-light);
+
+  box-shadow:
+    0 0 6px var(--color-primary-light),
+    0 0 14px rgba(196, 162, 124, 0.55);
+
+  opacity: 0.45;
+
+  animation: neuralPointPulse 3.5s ease-in-out infinite;
+}
+
+/* POSIÇÕES DOS PONTOS */
+
+.hero__neural-points span:nth-child(1) {
+  top: 25%;
+  left: 67%;
+  animation-delay: 0s;
+}
+
+.hero__neural-points span:nth-child(2) {
+  top: 32%;
+  left: 73%;
+  animation-delay: 0.6s;
+}
+
+.hero__neural-points span:nth-child(3) {
+  top: 42%;
+  left: 69%;
+  animation-delay: 1.2s;
+}
+
+.hero__neural-points span:nth-child(4) {
+  top: 48%;
+  left: 78%;
+  animation-delay: 1.8s;
+}
+
+.hero__neural-points span:nth-child(5) {
+  top: 58%;
+  left: 72%;
+  animation-delay: 0.9s;
+}
+
+.hero__neural-points span:nth-child(6) {
+  top: 65%;
+  left: 80%;
+  animation-delay: 2.2s;
+}
+
+.hero__neural-points span:nth-child(7) {
+  top: 38%;
+  left: 82%;
+  animation-delay: 1.5s;
+}
+
+.hero__neural-points span:nth-child(8) {
+  top: 52%;
+  left: 86%;
+  animation-delay: 2.8s;
+}
+
+.hero__neural-points span:nth-child(9) {
+  top: 29%;
+  left: 84%;
+  animation-delay: 0.4s;
+}
+
+.hero__neural-points span:nth-child(10) {
+  top: 70%;
+  left: 68%;
+  animation-delay: 2.5s;
+}
+
+.hero__neural-points span:nth-child(11) {
+  top: 44%;
+  left: 88%;
+  animation-delay: 1s;
+}
+
+@keyframes neuralPointPulse {
+  0%,
+  100% {
+    transform: scale(0.7);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.9;
+  }
+}
+
+/* PULSAÇÃO DO CÉREBRO */
+
+@keyframes brainPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.48;
+  }
+
+  50% {
+    transform: scale(1.015);
+    opacity: 0.62;
+  }
+}
+
+/* BRILHO DOS NEURÔNIOS */
+
+@keyframes brainGlow {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(1.08);
+  }
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero__brain {
+    background-position: 30% center;
+
+    opacity: 0.45;
+  }
+
+  .hero__overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(243, 240, 235, 0.97) 0%,
+        rgba(243, 240, 235, 0.90) 60%,
+        rgba(243, 240, 235, 0.45) 100%
+      );
+  }
+
+  .hero__content {
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+  }
+
+  .hero__title {
+    font-size: clamp(2.4rem, 9vw, 4rem);
+  }
+
+  .hero__description {
+    font-size: var(--font-size-md);
+  }
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero__brain {
+    background-position: 30% center;
+
+    opacity: 0.38;
+
+    animation:
+      brainPulseMobile 7s ease-in-out infinite,
+      brainGlow 7s ease-in-out infinite;
+  }
+
+  .hero__overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(243, 240, 235, 0.96) 0%,
+        rgba(243, 240, 235, 0.91) 58%,
+        rgba(243, 240, 235, 0.70) 100%
+      );
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+  }
+}
+
+
+/* PULSAÇÃO MAIS SUAVE NO CELULAR */
+
+@keyframes brainPulseMobile {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.34;
+  }
+
+  50% {
+    transform: scale(1.01);
+    opacity: 0.43;
+  }
+}
+
+/* PONTOS DE LUZ — CELULAR */
+
+@media (max-width: 768px) {
+  .hero__neural-points span {
+    width: 4px;
+    height: 4px;
+
+    box-shadow:
+      0 0 5px var(--color-primary-light),
+      0 0 10px rgba(196, 162, 124, 0.45);
+
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__neural-points span {
+    width: 3px;
+    height: 3px;
+
+    box-shadow:
+      0 0 4px var(--color-primary-light),
+      0 0 8px rgba(196, 162, 124, 0.4);
+  }
+
+  .hero__neural-points span:nth-child(1) {
+    top: 24%;
+    left: 65%;
+  }
+
+  .hero__neural-points span:nth-child(2) {
+    top: 31%;
+    left: 73%;
+  }
+
+  .hero__neural-points span:nth-child(3) {
+    top: 39%;
+    left: 69%;
+  }
+
+  .hero__neural-points span:nth-child(4) {
+    top: 47%;
+    left: 78%;
+  }
+
+  .hero__neural-points span:nth-child(5) {
+    top: 55%;
+    left: 72%;
+  }
+
+  .hero__neural-points span:nth-child(6) {
+    top: 63%;
+    left: 79%;
+  }
+
+  .hero__neural-points span:nth-child(7) {
+    top: 36%;
+    left: 82%;
+  }
+
+  .hero__neural-points span:nth-child(8) {
+    top: 51%;
+    left: 86%;
+  }
+
+  .hero__neural-points span:nth-child(9) {
+    top: 28%;
+    left: 84%;
+  }
+
+  .hero__neural-points span:nth-child(10) {
+    top: 68%;
+    left: 67%;
+  }
+
+  .hero__neural-points span:nth-child(11) {
+    top: 43%;
+    left: 88%;
+  }
+}
