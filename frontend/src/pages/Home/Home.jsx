@@ -12,19 +12,19 @@ function Home() {
       />
 
       <div className="hero__neural-points" aria-hidden="true">
-  <span />
-  <span />
-  <span />
-  <span />
-  <span />
-  <span />
-  <span />
-  <span />
-  <span />
-  <span />
-  <span />
-  <span />
-</div>
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
 
       <div className="hero__overlay" />
 
