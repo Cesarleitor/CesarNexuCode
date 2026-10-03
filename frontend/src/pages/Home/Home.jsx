@@ -56,7 +56,7 @@ function Home() {
 
             <Link
               to="/contato"
-              className="button button-secondary"
+              className="button button-primary"
             >
               Entre em contato
             </Link>
