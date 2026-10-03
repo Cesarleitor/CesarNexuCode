@@ -41,13 +41,11 @@
   z-index: 2;
 
   background:
-    linear-gradient(
-      90deg,
+    linear-gradient(90deg,
       rgba(243, 240, 235, 0.98) 0%,
       rgba(243, 240, 235, 0.94) 35%,
       rgba(243, 240, 235, 0.55) 58%,
-      rgba(243, 240, 235, 0.12) 100%
-    );
+      rgba(243, 240, 235, 0.12) 100%);
 
   pointer-events: none;
 }
@@ -233,6 +231,7 @@
 }
 
 @keyframes neuralPointPulse {
+
   0%,
   100% {
     transform: scale(0.7);
@@ -248,6 +247,7 @@
 /* PULSAÇÃO DO CÉREBRO */
 
 @keyframes brainPulse {
+
   0%,
   100% {
     transform: scale(1);
@@ -263,6 +263,7 @@
 /* BRILHO DOS NEURÔNIOS */
 
 @keyframes brainGlow {
+
   0%,
   100% {
     filter: brightness(1);
@@ -291,12 +292,10 @@
 
   .hero__overlay {
     background:
-      linear-gradient(
-        90deg,
+      linear-gradient(90deg,
         rgba(243, 240, 235, 0.97) 0%,
         rgba(243, 240, 235, 0.90) 60%,
-        rgba(243, 240, 235, 0.45) 100%
-      );
+        rgba(243, 240, 235, 0.45) 100%);
   }
 
   .hero__content {
@@ -324,10 +323,9 @@
   }
 
   .hero__brain {
-    background-position: 30% center;
-
-    opacity: 0.38;
-
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.45;
     animation:
       brainPulseMobile 7s ease-in-out infinite,
       brainGlow 7s ease-in-out infinite;
@@ -335,12 +333,10 @@
 
   .hero__overlay {
     background:
-      linear-gradient(
-        180deg,
+      linear-gradient(180deg,
         rgba(243, 240, 235, 0.96) 0%,
         rgba(243, 240, 235, 0.91) 58%,
-        rgba(243, 240, 235, 0.70) 100%
-      );
+        rgba(243, 240, 235, 0.70) 100%);
   }
 
   .hero__actions {
@@ -357,6 +353,7 @@
 /* PULSAÇÃO MAIS SUAVE NO CELULAR */
 
 @keyframes brainPulseMobile {
+
   0%,
   100% {
     transform: scale(1);
