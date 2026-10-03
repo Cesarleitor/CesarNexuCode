@@ -325,7 +325,7 @@
   .hero__brain {
     background-position: center center;
     background-size: cover;
-    opacity: 0.45;
+    opacity: 0.70;
     animation:
       brainPulseMobile 7s ease-in-out infinite,
       brainGlow 7s ease-in-out infinite;
@@ -334,9 +334,9 @@
   .hero__overlay {
     background:
       linear-gradient(180deg,
-        rgba(243, 240, 235, 0.96) 0%,
-        rgba(243, 240, 235, 0.91) 58%,
-        rgba(243, 240, 235, 0.70) 100%);
+        rgba(243, 240, 235, 0.90) 0%,
+        rgba(243, 240, 235, 0.78) 58%,
+        rgba(243, 240, 235, 0.55) 100%);
   }
 
   .hero__actions {
