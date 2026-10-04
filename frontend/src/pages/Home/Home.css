@@ -464,19 +464,18 @@
   .focus-grid {
     grid-template-columns: 1fr;
   }
-    .hero {
+
+  .hero {
     min-height: 560px;
   }
 
   .hero__brain {
-    background-position: 75% center;
-
+    background-position: center center;
     opacity: 0.45;
   }
 
-  
-
 }
+
 
 /* =========================
    TABLET - HERO
@@ -489,7 +488,11 @@
   }
 
   .hero__brain {
-    background-position: 75% center;
+    left: 0;
+    right: 0;
+
+    background-position: center center;
+    background-size: cover;
 
     opacity: 0.45;
   }
@@ -530,6 +533,7 @@
 
 }
 
+
 /* =========================
    CELULAR
    ========================= */
@@ -552,9 +556,7 @@
 
   .technologies-list span {
     min-height: 42px;
-
     padding: 0 1rem;
-
     font-size: 0.85rem;
   }
 
@@ -573,6 +575,7 @@
 
 }
 
+
 /* =========================
    HERO - CELULAR
    ========================= */
@@ -584,8 +587,10 @@
   }
 
   .hero__brain {
-    background-position: center center;
+    left: 0;
+    right: 0;
 
+    background-position: center center;
     background-size: cover;
 
     opacity: 0.70;
