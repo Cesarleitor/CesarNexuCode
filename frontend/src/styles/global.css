@@ -6,7 +6,7 @@
      ============================== */
 
   --color-bg-primary: #f3f0eb;
-  --color-bg-secondary: #eae5de;
+  --color-bg-secondary: #eeeae4;
   --color-bg-card: #faf9f7;
 
   --color-text-primary: #292725;
@@ -31,21 +31,21 @@
      TIPOGRAFIA
      ============================== */
 
- --font-family-base:
-  "Inter",
-  system-ui,
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  sans-serif;
+  --font-family-base:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 
---font-family-heading:
-  "Manrope",
-  system-ui,
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  sans-serif;
+  --font-family-heading:
+    "Manrope",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -84,7 +84,7 @@
      CONTAINER
      ============================== */
 
-  --container-width: 1200px;
+  --container-width: 1740px;
   --container-padding: 1.5rem;
 
   /* ==============================
@@ -506,9 +506,7 @@ strong {
   background-color: var(--color-bg-card);
 
   border:
-    var(--border-width)
-    solid
-    var(--color-border);
+    var(--border-width) solid var(--color-border);
 
   border-radius: var(--border-radius-lg);
 
@@ -542,9 +540,7 @@ select {
   background-color: var(--color-bg-card);
 
   border:
-    var(--border-width)
-    solid
-    var(--color-border);
+    var(--border-width) solid var(--color-border);
 
   border-radius: var(--border-radius-md);
 
