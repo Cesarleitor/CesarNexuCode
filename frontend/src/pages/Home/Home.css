@@ -16,9 +16,6 @@
   overflow: hidden;
   isolation: isolate;
   background-color: var(--color-bg-primary);
-  background-image: url('../../assets/banner01.jpg');
-  background-position: center;
-  background-size: cover;
 }
 
 .hero::before {
@@ -111,10 +108,15 @@
   position: absolute;
   z-index: -1;
   inset: 0;
+
   background-position: center right;
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 0.65;
+
+  opacity: 0.35;
+  transform-origin: center right;
+  animation: brain-pulse 5s ease-in-out infinite;
+
   pointer-events: none;
 }
 
@@ -464,6 +466,19 @@
   }
 }
 
+@keyframes brain-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.45;
+    transform: scale(1.025);
+  }
+}
+
 /* -----------------------------------------
    8. TABLETS
    ----------------------------------------- */
@@ -483,9 +498,8 @@
     max-width: 600px;
   }
 
-  .hero__brain {
+   .hero__brain {
     background-position: center;
-    opacity: 0.45;
   }
 
   .focus-grid,
