@@ -1,4 +1,3 @@
-
 import fotoPerfil from '../../assets/EuSobreMim.jpeg'
 import './About.css'
 
