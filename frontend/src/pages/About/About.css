@@ -1,0 +1,274 @@
+
+.about {
+  width: 100%;
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
+}
+
+.about__hero {
+  padding: 88px 24px;
+}
+
+.about__container,
+.about__section-container,
+.about__closing-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: 64px;
+}
+
+.about__image {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.about__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--color-accent);
+  border-radius: 18px;
+}
+
+.about__image-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  color: var(--color-text-primary);
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.about__caption-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.about__content {
+  max-width: 680px;
+}
+
+.about__eyebrow {
+  margin: 0 0 16px;
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.about__content h1,
+.about__section h2,
+.about__closing h2 {
+  margin: 0 0 24px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.15;
+}
+
+.about__lead {
+  margin: 0 0 20px;
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+.about__text,
+.about__section-intro,
+.about__card p,
+.about__learning p,
+.about__closing-container > p:not(.about__eyebrow) {
+  font-size: 1rem;
+  line-height: 1.85;
+  opacity: 0.86;
+}
+
+.about__text {
+  margin: 0 0 18px;
+}
+
+.about__interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.about__interests span {
+  padding: 9px 14px;
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  font-size: 0.84rem;
+}
+
+.about__section {
+  padding: 84px 24px;
+}
+
+.about__section h2 {
+  max-width: 760px;
+}
+
+.about__section-intro {
+  max-width: 720px;
+  margin: 0 0 36px;
+}
+
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.about__card {
+  padding: 30px 26px;
+  border: 1px solid var(--color-accent);
+  border-radius: 16px;
+  background: var(--color-bg-primary);
+}
+
+.about__card-number {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.about__card h3,
+.about__learning h3 {
+  margin: 0 0 14px;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.about__card p,
+.about__learning p {
+  margin: 0;
+}
+
+.about__section--highlight {
+  background: var(--color-bg-secondary);
+}
+
+.about__section--highlight .about__section-container {
+  max-width: 850px;
+}
+
+.about__learning {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.about__learning > div {
+  padding-top: 22px;
+  border-top: 2px solid var(--color-accent);
+}
+
+.about__closing {
+  padding: 88px 24px;
+  background: var(--color-bg-secondary);
+  text-align: center;
+}
+
+.about__closing-container {
+  max-width: 800px;
+}
+
+.about__closing h2 {
+  margin-bottom: 22px;
+}
+
+.about__closing-container > p:not(.about__eyebrow) {
+  max-width: 720px;
+  margin: 0 auto 16px;
+}
+
+@media (max-width: 900px) {
+  .about__container {
+    gap: 40px;
+  }
+
+  .about__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about__card {
+    padding: 26px;
+  }
+
+  .about__card-number {
+    margin-bottom: 18px;
+  }
+
+  .about__learning {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__hero,
+  .about__section,
+  .about__closing {
+    padding: 56px 20px;
+  }
+
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .about__image {
+    max-width: 280px;
+  }
+
+  .about__content h1,
+  .about__section h2,
+  .about__closing h2 {
+    font-size: 2.2rem;
+  }
+
+  .about__lead {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .about__hero,
+  .about__section,
+  .about__closing {
+    padding: 44px 18px;
+  }
+
+  .about__image {
+    max-width: 240px;
+  }
+
+  .about__content h1,
+  .about__section h2,
+  .about__closing h2 {
+    font-size: 1.85rem;
+  }
+
+  .about__interests span {
+    font-size: 0.8rem;
+  }
+}
