@@ -18,6 +18,39 @@
   background-color: var(--color-bg-primary);
 }
 
+
+.hero__brain {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: auto 150%;
+
+  opacity: 0.55;
+  pointer-events: none;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+
+  animation: brain-pulse 5s ease-in-out infinite;
+
+}
+
 .hero::before {
   position: absolute;
   z-index: -1;
@@ -104,21 +137,6 @@
   outline-offset: 4px;
 }
 
-.hero__brain {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  opacity: 0.35;
-  transform-origin: center right;
-  animation: brain-pulse 5s ease-in-out infinite;
-
-  pointer-events: none;
-}
 
 .hero__neural-points span {
   animation: neural-pulse 3s ease-in-out infinite;
