@@ -658,3 +658,38 @@
     transform: none;
   }
 }
+
+/* TESTE — VISIBILIDADE DOS PROJETOS */
+.home-projects {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative;
+  z-index: 1;
+}
+
+.home-projects .projects-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.home-projects .project-card {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .home-projects .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .home-projects .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

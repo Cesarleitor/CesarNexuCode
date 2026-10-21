@@ -4,6 +4,48 @@ import Card from '../../components/Card/Card'
 import './Home.css'
 import banner01 from '../../assets/banner01.jpg'
 
+import {
+  ArrowUpRight,
+  Code2,
+  BookOpen,
+  BrainCircuit,
+  UserRound,
+  ExternalLink,
+} from 'lucide-react'
+
+const projetosDestaque = [
+  {
+    id: 1,
+    titulo: 'PetCare',
+    descricao:
+      'Sistema para gestão de serviços e cuidados para animais de estimação.',
+    tecnologias: ['Java', 'Spring Boot', 'PostgreSQL'],
+    imagem: null,
+    github: 'https://github.com/Cesarleitor',
+    categoria: 'Desenvolvimento Full Stack',
+  },
+  {
+    id: 2,
+    titulo: 'Devas Tantra',
+    descricao:
+      'Projeto web com foco em experiência do usuário, design e desenvolvimento de interfaces.',
+    tecnologias: ['React', 'JavaScript', 'CSS'],
+    imagem: null,
+    github: 'https://github.com/Cesarleitor/devas-tantra-frontend',
+    categoria: 'Desenvolvimento Web',
+  },
+  {
+    id: 3,
+    titulo: 'CesarNexuCode',
+    descricao:
+      'Meu portfólio de desenvolvimento de software, inteligência artificial e Machine Learning.',
+    tecnologias: ['React', 'Python', 'IA & ML'],
+    imagem: null,
+    github: 'https://github.com/Cesarleitor',
+    categoria: 'Projeto pessoal',
+  },
+]
+
 function Home() {
   return (
     <>
@@ -71,6 +113,150 @@ function Home() {
 
       </section>
 
+
+      {/* ACESSO RÁPIDO */}
+      <section className="home-shortcuts">
+        <div className="container">
+
+
+          <SectionTitle
+            eyebrow="Explore"
+            title="Um pouco do meu universo."
+            description="Projetos, conhecimento e experiências que fazem parte da minha jornada na tecnologia."
+          />
+
+          <div className="shortcuts-grid">
+
+            <Link to="/projetos" className="shortcut-card">
+              <div className="shortcut-card__top">
+                <Code2 size={25} />
+                <ArrowUpRight size={21} className="shortcut-card__arrow" />
+              </div>
+
+              <h3>Projetos</h3>
+
+              <p>
+                Aplicações, experimentos e soluções desenvolvidas
+                com diferentes tecnologias.
+              </p>
+
+              <span>Explorar projetos</span>
+            </Link>
+
+            <Link to="/artigos" className="shortcut-card">
+              <div className="shortcut-card__top">
+                <BookOpen size={25} />
+                <ArrowUpRight size={21} className="shortcut-card__arrow" />
+              </div>
+
+              <h3>Artigos e ideias</h3>
+
+              <p>
+                Aprendizados, tutoriais e reflexões sobre programação
+                e tecnologia.
+              </p>
+
+              <span>Explorar conteúdos</span>
+            </Link>
+
+            <Link to="/formacao" className="shortcut-card">
+              <div className="shortcut-card__top">
+                <BrainCircuit size={25} />
+                <ArrowUpRight size={21} className="shortcut-card__arrow" />
+              </div>
+
+              <h3>IA & Machine Learning</h3>
+
+              <p>
+                Minha jornada de estudos e exploração de sistemas
+                inteligentes.
+              </p>
+
+              <span>Conhecer minha formação</span>
+            </Link>
+
+            <Link to="/sobre" className="shortcut-card">
+              <div className="shortcut-card__top">
+                <UserRound size={25} />
+                <ArrowUpRight size={21} className="shortcut-card__arrow" />
+              </div>
+
+              <h3>Sobre mim</h3>
+
+              <p>
+                Minha trajetória, meus objetivos e minha evolução
+                como profissional de tecnologia.
+              </p>
+
+              <span>Conhecer minha história</span>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
+      {/* PROJETOS EM DESTAQUE */}
+      <section className="home-projects">
+        <div className="container">
+          <SectionTitle
+            eyebrow="Portfólio"
+            title="Projetos em destaque."
+            description="Conheça algumas das soluções, experiências e ideias que desenvolvo durante minha jornada na tecnologia."
+          />
+
+          <div className="projects-grid">
+            {projetosDestaque.map((projeto) => (
+              <article className="project-card" key={projeto.id}>
+                <div className="project-card__image">
+                  {projeto.imagem ? (
+                    <img
+                      src={projeto.imagem}
+                      alt={`Capa do projeto ${projeto.titulo}`}
+                    />
+                  ) : (
+                    <div className="project-card__placeholder">
+                      <Code2 size={42} />
+                      <span>{projeto.categoria}</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="project-card__content">
+                  <h3>{projeto.titulo}</h3>
+
+                  <p>{projeto.descricao}</p>
+
+                  <div className="project-card__technologies">
+                    {projeto.tecnologias.map((tecnologia) => (
+                      <span key={tecnologia}>{tecnologia}</span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={projeto.github}
+                    className="project-card__link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Code2 size={18} />
+                    Ver no GitHub
+                    <ExternalLink size={16} />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="home-projects__action">
+            <Link to="/projetos" className="button button-primary">
+              Ver todos os projetos
+              <ArrowUpRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+
       {/* FOCO */}
       <section className="home-focus">
         <div className="container">
@@ -123,7 +309,7 @@ function Home() {
       </section>
 
       {/* TECNOLOGIAS */}
-      <section className="home-technologies">
+       <section className="home-technologies" >
         <div className="container">
 
           <SectionTitle
@@ -147,7 +333,7 @@ function Home() {
       </section>
 
       {/* CTA */}
-      <section className="home-cta">
+       <section className="home-cta" >
         <div className="container">
 
           <div className="home-cta__content">
